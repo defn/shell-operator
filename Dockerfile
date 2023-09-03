@@ -26,7 +26,7 @@ RUN CGO_ENABLED=1 \
 # image
 FROM ubuntu:22.04
 
-RUN apt update && apt install -y ca-certificates tini sed jq
+RUN apt update && apt install -y ca-certificates tini
 RUN mkdir /hooks
 ADD frameworks/shell /frameworks/shell
 ADD shell_lib.sh /
