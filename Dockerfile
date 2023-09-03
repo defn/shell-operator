@@ -36,5 +36,5 @@ COPY --from=builder /app/shell-operator /
 WORKDIR /
 ENV SHELL_OPERATOR_HOOKS_DIR /hooks
 ENV LOG_TYPE json
-ENTRYPOINT ["/sbin/tini", "--", "/shell-operator"]
+ENTRYPOINT ["/bin/tini", "--", "/shell-operator"]
 CMD ["start"]
