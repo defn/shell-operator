@@ -5,7 +5,7 @@ FROM flant/jq:b6be13d5-musl as libjq
 FROM golang:1.21.0-alpine3.18 AS builder
 
 ARG appVersion=latest
-RUN apk --no-cache add git ca-certificates gcc musl-dev libc-dev
+RUN apk add git ca-certificates gcc musl-dev libc-dev
 
 ADD go.mod go.sum /app/
 WORKDIR /app
